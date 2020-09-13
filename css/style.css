@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 100px;
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    
+}
+header.sticky{
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+header.sticky .logo{
+    color: #111111;
+}
+
+header  ul{
+    
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    position: relative;
+    list-style-type: none;
+    
+}
+
+header  ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+}
+
+header.sticky  ul li a{
+    color: #111;
+}
+
+header  ul li a:hover{
+    color: #2196f3;
+}
+
+.toggle{
+    visibility: hidden;
+}
+
+
+.banner{
+    position: relative;
+    min-height: 100vh;
+    background-color: black;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.banner h2  span{
+    font-size: 1.5em ;
+    font-weight: 700;
+}
+
+.banner h3{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn{
+    position: relative;
+    background:#2196f3 ;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none ;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    background-image:linear-gradient(to bottom right,#056cc0, #2196f3);
+
+}
+
+.btn:hover{
+    background-image:linear-gradient(to bottom right, #2196f3 ,#0a77cf);
+}
+
+/** Section b */
+
+.heading{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.heading h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.contentBx{
+    padding-right: 30px;
+}
+
+.contentBx h3{
+    
+ font-size: 24px;
+ margin-bottom: 10px;
+}
+
+.contentBx p{
+    text-align: justify;
+}
+
+.w50{
+    min-width: 50%;
+}
+
+.w50 img{
+    max-width: 100% ;
+}
+
+
+/** Section c */
+
+.services{
+    background: #111;
+}
+
+
+.heading.white{
+color: #fff;
+}
+
+.services .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .servicesBx{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.services .content .servicesBx:hover{
+    background: #2196f3;
+}
+
+.services .content .servicesBx svg{
+    max-width: 150px;
+    
+}
+
+.services .content .servicesBx h2{
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+/** Section d */
+
+.work{
+    border-bottom: 10px solid black;
+}
+
+.work .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+
+.work .content .workBx {
+
+    width: 50%;
+    padding: 20px;
+
+}
+
+.work .content .workBx img{
+    max-width: 100%;
+}
+
+/** Section e */
+
+.testimonial{
+   background: #f7f7f7; 
+
+}
+.testimonial .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial .content .testimonialBx{
+    max-width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin: 20px;
+    background: #2196f3;
+    border-radius: 20px;
+}
+
+.testimonial .content .testimonialBx p{
+    color:#fff;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.testimonial .content .testimonialBx h3{
+    margin-top: 40px;
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5em;
+
+
+}
+.testimonial .content .testimonialBx h3 span {
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/** Section f */
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(2.jpg) ;
+    background-size: cover;
+
+}
+
+.contact .overlay{
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(7, 6, 6);
+        mix-blend-mode: overlay;
+    
+    
+}
+
+.contact .heading{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .heading h2{
+
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+
+}
+
+.contact .heading p{
+    
+    font-weight: 300;
+    color: #fff;
+}
+
+.contentB{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contentB .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentB .contactInfo h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contentB .contactInfoBx .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+
+}
+
+.contentB .contactInfoBx .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contentB .contactInfoBx .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contentB .contactInfoBx .box .text h3{
+    font-weight: 300;
+    color: #00bcd4;
+}
+
+
+
+.contactForm  {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm  .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm  .inputBox input,
+.contactForm  .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333 ;
+    outline: none;
+    resize: none;
+}
+
+.contactForm  .inputBox span{
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm  .inputBox input:focus ~ span,
+.contactForm  .inputBox input:valid ~ span,
+.contactForm  .inputBox textarea:focus ~ span,
+.contactForm  .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm  .inputBox input[type ="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font: size 18px;
+
+}
+
+.copyright{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+/** Responsive */
+
+@media (max-width: 991px) {
+
+    .header,
+    .header.sticky{
+        padding: 20px 50px;
+    }
+
+    .menu{
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+
+    }
+
+    .menu.active{
+        left: 0;
+    }
+
+    header ul li a{
+        color: #111;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px;
+        transition: 0.5s;
+
+    }
+    header ul:hover li a{
+        color: #0002;
+                
+    }
+    header ul li a:hover{
+        color: #000;
+        background: #fff;
+                
+    }
+    header ul li a::before{
+        content: '';
+        position: absolute;
+        top:50%;
+        left: 40%;
+        transform: translate(-50% ,-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+        color:rgba(0,0,0,0.1) ;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0;
+        text-transform: uppercase;
+        letter-spacing: 500px;
+        transition: letter-spacing 0.5s, left 0.5s;
+    }
+
+    header ul li a:hover:before{
+        content: attr(data-text);
+        opacity: 1;
+        left: 50%;
+        letter-spacing: 10px;
+        width: 1800px;
+        height: 1800px;
+
+    }
+
+    header ul li:nth-child(6n+1) a::before{
+        background: #81ecec;
+    }
+    header ul li:nth-child(6n+2) a::before{
+        background: #ff7675;
+    }
+    header ul li:nth-child(6n+3) a::before{
+        background: #55efc4;
+    }
+    header ul li:nth-child(6n+4) a::before{
+        background: #a29bfe;
+    }
+    header ul li:nth-child(6n+5) a::before{
+        background: #fd79a8;
+    }
+    header ul li:nth-child(6n+6) a::before{
+        background: #ffeaa7;
+    }
+
+    .toggle{
+       
+        cursor: pointer;
+        transform: scale(1.5);
+        color: #fff;
+        align-items: center;
+        visibility: visible;
+                   
+       
+    }
+
+    header.sticky .toggle{
+        filter: invert(1);
+    }
+
+    section{
+        padding: 100px 50px;
+    }
+
+    .banner{
+        padding: 150px 50px 100px;
+    }
+
+    .banner h2{
+        font-size: 1.5em;
+    }
+
+    .banner h3{
+        font-size: 1em;
+    }
+
+    .btn{
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .heading h2{
+        font-size: 24px;
+        
+    }
+
+    .contentBx h3{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .w50{
+        margin-bottom: 20px;
+    }
+
+    .services .content .servicesBx {
+        margin: 10px;
+    }
+
+    .work .content .workBx{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .testimonial .content .testimonialBx{
+        max-width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 10px;
+
+    }
+
+    .contact{
+        padding: 50px;
+    }
+    .contentB{
+        flex-direction: column;
+    }
+
+    .contentB .contactInfoBx{
+        margin-bottom: 40px;
+    }
+
+    .contentB .contactInfoBx,
+    .contactForm{
+        width: 100%;
+
+    }
+
+}
